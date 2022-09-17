@@ -16,24 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('loginORM'), [:], FailureHandling.STOP_ON_FAILURE)
 
-try {
-	'read data from profiles'
-    WebUI.navigateToUrl(GlobalVariable.url)
-}
-catch (Exception ex) {
-    println('General issue occurs.')
-} 
+text1=CustomKeywords.'customkeywordepackage.keywordclass.getTextMethod'(findTestObject('Page_OrangeHRM/span_(37) Records Found'))
 
-WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), 'Admin')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
-
-WebUI.click(findTestObject('objects/Page_OrangeHRM/button_Login'))
-
-text1 = WebUI.getText(findTestObject('Page_OrangeHRM/span_(37) Records Found'))
 
 text1 = ((text1[1]) + (text1[2]))
 
@@ -53,11 +42,29 @@ WebUI.click(findTestObject('Page_OrangeHRM/button_Save'))
 
 WebUI.click(findTestObject('Object Repository/Page_OrangeHRM/a_Employee List'))
 
-text2 = WebUI.getText(findTestObject('Page_OrangeHRM/span_(37) Records Found'))
-
+text2 = CustomKeywords.'customkeywordepackage.keywordclass.getTextMethod'(findTestObject('Page_OrangeHRM/span_(37) Records Found'))
 text2 = ((text2[1]) + (text2[2]))
 
 println(text2)
 
-WebUI.verifyEqual(text2, Integer.parseInt(text1)+1)
+WebUI.verifyEqual(text2, Integer.parseInt(text1) + 1)
+
+CustomKeywords.'customkeywordepackage.keywordclass.displayallrecpords'(findTestObject('Object Repository/Page_OrangeHRM/allname'))
+
+/**
+println('number of records present' + listElement.size())
+
+		for (WebElement e : listElement) {
+			println(e.getText())
+
+			'println(e)'
+		}
+*/
+WebUI.click(findTestObject('Page_OrangeHRM/div_-- Select --'))
+
+WebUI.click(findTestObject('Page_OrangeHRM/div_Full-Time Contract'))
+
+WebUI.click(findTestObject('Page_OrangeHRM/button_Search'))
+
+CustomKeywords.'customkeywordepackage.keywordclass.displayallrecpords'(findTestObject('Object Repository/Page_OrangeHRM/allname'))
 
