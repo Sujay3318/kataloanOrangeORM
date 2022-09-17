@@ -29,8 +29,18 @@ public class keywordclass {
 		return WebUI.getText(obj)
 	}
 
+	@Keyword(keywordObject = "test2")
+	def clickMethod(TestObject obj) {
+		WebUI.click(obj)
+	}
 
-	@Keyword(keywordObject="test2")
+
+	@Keyword(keywordObject = "test3")
+	def setTextMethod(TestObject obj,String name) {
+		WebUI.setText(obj, name)
+	}
+
+	@Keyword(keywordObject="test4")
 	def displayallrecpords(TestObject obj) {
 		List<WebElement> listElement = WebUI.findWebElements(obj, 10)
 		println('number of records present' + listElement.size())
@@ -41,4 +51,12 @@ public class keywordclass {
 			'println(e)'
 		}
 	}
+	
+	@Keyword(keywordObject = "test5")
+	def fetchnumber(String text1) {
+		text1 = ((text1[1]) + (text1[2]))
+		println(text1)
+		return text1
+	}
+	
 }

@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "204384313FADEEFAAA97A93A8CE2A1AE",
+  "keywordFileContentHash": "4EFC7627D5475BAF9AB49C8D0DA5DC0F",
   "keywordClasses": [
     {
       "name": "customkeywordepackage.keywordclass",
@@ -20,7 +20,59 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "clickMethod",
+          "parameters": [
+            {
+              "name": "obj",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "com.kms.katalon.core.testobject.TestObject",
+                "unresolvedClassName": "TestObject",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "setTextMethod",
+          "parameters": [
+            {
+              "name": "obj",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "com.kms.katalon.core.testobject.TestObject",
+                "unresolvedClassName": "TestObject",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "name",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
         },
         {
           "name": "displayallrecpords",
@@ -38,10 +90,30 @@
                 "errorOnParsing": false
               }
             }
-          ]
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "fetchnumber",
+          "parameters": [
+            {
+              "name": "text1",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
         }
       ]
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }
