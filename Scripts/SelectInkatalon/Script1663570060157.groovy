@@ -17,15 +17,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+'follow the reference'
+
+'https://docs.katalon.com/docs/katalon-studio-enterprise/test-execution/advanced-guides/web-testing/how-to-handle-drop-down-menu'
+
+'open browser'
 WebUI.openBrowser('')
 
-'read data from profiles'
-WebUI.navigateToUrl(GlobalVariable.url)
+WebUI.navigateToUrl('https://www.amazon.in/')
 
-// WebUI.navigateToUrl(findTestData('App_URL').getValue(1, 1), FailureHandling.CONTINUE_ON_FAILURE)
-WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), username)
+'maximize the window'
+WebUI.maximizeWindow()
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
+'Select the dropdown value by Select option By index Method'
+WebUI.selectOptionByIndex(findTestObject('Object Repository/Page_OrangeHRM/selectInAmazon'), 2)
 
-WebUI.click(findTestObject('objects/Page_OrangeHRM/button_Login'))
+def str = WebUI.getText(findTestObject('Object Repository/Page_OrangeHRM/selectInAmazon'))
+
+'Verifying the Option is Selected by Index option'
+println(str)
+
+WebUI.verifyOptionSelectedByIndex(findTestObject('Object Repository/Page_OrangeHRM/selectInAmazon'), 2, 60)
+
+println(WebUI.getNumberOfSelectedOption(findTestObject('Page_OrangeHRM/selectInAmazon')))
 

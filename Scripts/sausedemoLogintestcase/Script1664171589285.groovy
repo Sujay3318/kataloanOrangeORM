@@ -19,13 +19,17 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-'read data from profiles'
-WebUI.navigateToUrl(GlobalVariable.url)
+WebUI.navigateToUrl('https://www.saucedemo.com/')
 
-// WebUI.navigateToUrl(findTestData('App_URL').getValue(1, 1), FailureHandling.CONTINUE_ON_FAILURE)
-WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), username)
+WebUI.setText(findTestObject('Page_Swag Labs/userName', [('name') : 'user-name']), username)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
+WebUI.setEncryptedText(findTestObject('Page_Swag Labs/userName', [('name') : 'password']), 'qcu24s4901FyWDTwXGr6XA==')
 
-WebUI.click(findTestObject('objects/Page_OrangeHRM/button_Login'))
+WebUI.click(findTestObject('Object Repository/Page_Swag Labs/input_standard_userlocked_out_userproblem_u_0dff71'))
+
+WebUI.click(findTestObject('Object Repository/Page_Swag Labs/button_Open Menu'))
+
+WebUI.click(findTestObject('Object Repository/Page_Swag Labs/a_All Items'))
+
+WebUI.click(findTestObject('Object Repository/Page_Swag Labs/a_About'))
 

@@ -23,6 +23,7 @@ import internal.GlobalVariable
 
 public class keywordclass {
 
+	/*KeywordObjet=is name of keyword*/
 	@Keyword(keywordObject = "test1")
 	def getTextMethod(TestObject obj) {
 		'println(obj)'
@@ -51,12 +52,11 @@ public class keywordclass {
 			'println(e)'
 		}
 	}
-	
+
 	@Keyword(keywordObject = "test5")
 	def fetchnumber(String text1) {
 		text1 = ((text1[1]) + (text1[2]))
 		println(text1)
 		return text1
 	}
-	
 }

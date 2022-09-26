@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>loginORM</name>
+   <name>sausedemoLogintestcase</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>d93915fd-8bd1-4777-b767-2a3bd9a84c09</testCaseGuid>
+   <testCaseGuid>c714620b-c5df-4572-b60c-fe3b0823554d</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>fa4ae2f8-e227-4ede-b926-6fbb6f96bdd6</variableId>
+      <variableId>c175d5ad-9254-44d3-8378-9ff1cf725b2f</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>'Admin'</defaultValue>
+      <defaultValue>'standard_user'</defaultValue>
       <description></description>
-      <id>fa4ae2f8-e227-4ede-b926-6fbb6f96bdd6</id>
+      <id>c175d5ad-9254-44d3-8378-9ff1cf725b2f</id>
       <masked>false</masked>
       <name>username</name>
    </variable>

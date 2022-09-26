@@ -17,15 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+println(GlobalVariable.listvariable)
 
-'read data from profiles'
-WebUI.navigateToUrl(GlobalVariable.url)
+for (int i = 0; i < GlobalVariable.listvariable.size; i++) {
+    println(GlobalVariable.listvariable[i])
+}
 
-// WebUI.navigateToUrl(findTestData('App_URL').getValue(1, 1), FailureHandling.CONTINUE_ON_FAILURE)
-WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), username)
+println(GlobalVariable.listvariable.get(1))
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
+GlobalVariable.listvariable[0] = 'new string added'
 
-WebUI.click(findTestObject('objects/Page_OrangeHRM/button_Login'))
+println(GlobalVariable.listvariable)
+
+for (int i = 0; i < GlobalVariable.listvariable.size; i++) {
+    println(GlobalVariable.listvariable[i])
+}
+
+println(GlobalVariable.Mapobj)
+
+println(GlobalVariable.Mapobj.get(2))
+
+println(GlobalVariable.Mapobj.get(1))
 

@@ -9,4 +9,14 @@
       <initValue>'opensource-demo.orangehrmlive.com/web/index.php/auth/login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>['', 'bhai', 'sujay']</initValue>
+      <name>listvariable</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[(2) : 'bhai', (1) : 'sujay']</initValue>
+      <name>Mapobj</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

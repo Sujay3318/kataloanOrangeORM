@@ -14,18 +14,18 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+
+import customkeywordepackage.ExcelUtility
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
 
-'read data from profiles'
-WebUI.navigateToUrl(GlobalVariable.url)
+ExcelUtility.SetExcelFile("C:/Users/gs-3448/Downloads/ExcelFiles/", "testfile.xlsx");
+def row=ExcelUtility.GetRowCount("Sheet1");
 
-// WebUI.navigateToUrl(findTestData('App_URL').getValue(1, 1), FailureHandling.CONTINUE_ON_FAILURE)
-WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), username)
+  println(row); for(int i=0;i<row;i++) { for(int j=0;j<2;j++) {
+  println(ExcelUtility.GetCellData("Sheet1", j, i)); } }
+ 
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
-
-WebUI.click(findTestObject('objects/Page_OrangeHRM/button_Login'))
-
+ExcelUtility.setCelltex("testfile.xlsx", "Sheet1", row, "username", "UserName");
+ExcelUtility.setCelltex("testfile.xlsx", "Sheet1", row, "password", "passord ");

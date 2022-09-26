@@ -17,15 +17,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+def mp = ["TopicName" : "Maps", "TopicDescription" : "Methods in Maps"]
 
-'read data from profiles'
-WebUI.navigateToUrl(GlobalVariable.url)
+println(mp.containsKey("TopicName"));
+println(mp.containsKey("Topic"));
 
-// WebUI.navigateToUrl(findTestData('App_URL').getValue(1, 1), FailureHandling.CONTINUE_ON_FAILURE)
-WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), username)
+println(mp.get("TopicName"));
+println(mp.get("Topic"));
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
+println(mp.keySet());
+mp.put("TopicID","1");
+mp.put("TopicName","overideoldvalue");
+println(mp);
+'semicolan is not mandatory'
+println(mp.size());
 
-WebUI.click(findTestObject('objects/Page_OrangeHRM/button_Login'))
+println(mp.values());
 
+int[] array = [0,1,2,3];
+
+for(int i in array) {
+ println(i);
+}
+
+println(array[1])
+
+String sample = "Hello world";
+println(sample[4]); // Print the 5 character in the string
+  https://www.tutorialspoint.com/groovy/groovy_strings.htm
+//Print the 1st character in the string starting from the back
+println(sample[-1]);
+println(sample[1..2]);//Prints a string starting from Index 1 to 2
+println(sample[4..2]);//Prints a string starting from Index 4 back to 2
+int a=10;
+println(a)
+def p=20;
+println(p)
